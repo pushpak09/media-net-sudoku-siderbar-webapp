@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Timer from "../src/components/timer/app.js";
+import SudokuTables from "../src/components/sudokuTables/app.js";
+import SudokuOptions from "../src/components/options/app.js";
+import SudokuDigits from "../src/components/digits/app.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="sudoku-title">
+        <img src="images/sudoku-logo.png" alt="Sudoku Logo" />
+      </div>
+      <div className="sudoku-main-content-wrapper">
+        <Timer />
+        <div className="sudoku-table-wrapper">
+          <SudokuTables />
+          <SudokuTables />
+          <SudokuTables />
+        </div>
+        <SudokuOptions />
+        <SudokuDigits />
+      </div>
     </div>
   );
 }

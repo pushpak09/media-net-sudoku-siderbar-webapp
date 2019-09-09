@@ -1,33 +1,33 @@
 .App {
+  background-color: #906aff;
+  background-image: linear-gradient(#906aff, #13edff);
+  height: calc(100vh - 72px);
+  width: 100vw;
+  color: #fff;
+  padding: 24px 0 48px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.sudoku-title {
+  padding: 11px 10px 6px;
   text-align: center;
+  background: rgba(0, 0, 0, .13);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.sudoku-title img {
+  width: 126px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sudoku-main-content-wrapper {
+  justify-content: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* height: calc(100vh - 114px); */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 320px) {
+  .sudoku-tables-container .sudoku-tables-wrapper tbody tr td table.sudoku-block-tables tbody tr td.target {
+    height: 3.5vh;
   }
 }
