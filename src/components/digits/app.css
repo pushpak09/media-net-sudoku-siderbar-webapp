@@ -1,0 +1,61 @@
+.sudoku-digits-container {
+    margin: 0 10px;
+    display: flex;
+}
+
+/* .wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+} */
+
+.sudoku-digits-container .digits {
+    flex: 1 1;
+    border: 2px solid rgba(255, 255, 255, .32);
+    margin: 2px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .06);
+    height: 47px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sudoku-digits-container .digits:first-child {
+    margin-left: 0;
+}
+
+.sudoku-digits-container .digits:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-height: 700px) and (max-height: 799px) {
+    .sudoku-digits-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+        grid-gap: 1px;
+    }
+    .sudoku-digits-container .digits:first-child {
+        margin-left: 2px;
+    }
+    .sudoku-digits-container .digits:last-child {
+        margin-right: 2px;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 900px) {
+    .sudoku-digits-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+        grid-gap: 1px;
+    }
+    .sudoku-digits-container .digits:first-child {
+        margin-left: 2px;
+    }
+    .sudoku-digits-container .digits:last-child {
+        margin-right: 2px;
+    }
+}
